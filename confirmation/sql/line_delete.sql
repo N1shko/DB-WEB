@@ -1,0 +1,1 @@
+delete from consigment_lines where cons_id = '$cn_id'

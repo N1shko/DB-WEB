@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    <script type="text/javascript">
+<!--
+
+function validate_form ( ){
+	valid = true;
+
+        if ( document.login_form.lg.value == "" ){
+                alert ( "Пожалуйста заполните поле 'Логин'." );
+                valid = false;
+                return valid;
+        }
+        if ( document.login_form.password.value == "" ){
+                alert ( "Пожалуйста заполните поле 'Пароль'." );
+                valid = false;
+        }
+
+        return valid;
+}
+
+//-->
+</script>
+</head>
+<body>
+<main align="center">
+    <article>
+  <h2 align="center"> Введите логин и пароль</h2> <br><br>
+  <div align="center">
+     <form name="login_form" method="post" action="" onsubmit="return validate_form ( );">
+          <label for="lg">  Логин</label>
+          <input type=text id="lg" name="lg"><br><br>
+
+          <label for="password"> Пароль </label>
+          <input type="password" name="password" id="password"><br><br><br><br>
+
+          <input type="submit" class="button" value="Войти в систему">
+      </form>
+      <br><br>
+      <h2 align="center">{{ message }}</h2>
+  </div>
+</article>
+</main>
+</body>
+</html>

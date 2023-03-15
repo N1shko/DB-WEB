@@ -1,0 +1,1 @@
+SELECT * FROM `123`.supplier where sup_date >= '$input_date';

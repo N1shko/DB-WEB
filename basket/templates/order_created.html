@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Накладная оформлена</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+</head>
+<body>
+<main align="center">
+    <article>
+
+        Ваша накладная успешно оформлена
+        <br><br><br>
+        Уникальный номер накладной: {{order_id}}
+        <br><br><br>
+        <a href={{url_for('bp_order.order_index')}}> Нажмите для возврата в меню покупок</a>
+
+    </article>
+</main>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block external_user %}
+<br>
+    <a href="{{ url_for('bp_query.query') }}">Посмотреть данные своих накладных</a><br>
+    <a href="{{ url_for('bp_order.order_index') }}">Создать новую накладную</a><br>
+    <a href="/exit"> Нажмите для выхода из системы</a>
+
+{% endblock %}

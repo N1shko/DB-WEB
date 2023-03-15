@@ -1,0 +1,1 @@
+select * from consigment_lines where cons_id = '$cons_id'
