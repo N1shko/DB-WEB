@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Данные поставщиков</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    <script type="text/javascript">
+<!--
+
+function validate_form ( ){
+	valid = true;
+	let year = new Date().getFullYear()
+	const currentYear = new Date().getFullYear();
+      let arr = document.input_form.input_date.value.split('-');
+      let arr1 = document.input_form.input_date1.value.split('-');
+      //console.log(arr);
+      var x = Number(arr[0])
+      var x1 = Number(arr1[0])
+      //console.log(x);
+        if ( document.input_form.input_date.value == ""
+        || document.input_form.input_date1.value == ""
+        || document.input_form.input_date1.value < document.input_form.input_date.value){
+            alert ( "Данные введены некорректно!" );
+            valid = false;
+            return valid;
+        }
+        if (x > year || x1 > year || x < 1970 || x1 < 1970){
+            alert ( "Некорректный год! Не больше "   + year + " и не меньше 1970" );
+            valid = false;
+            return valid;
+        }
+        return valid;
+}
+
+//-->
+</script>
+</head>
+<body>
+<main align="center">
+    <article>
+  <h2 align="center"> Введите диапазон дат заключения договоров</h2>
+    <div align = center>
+        <form name="input_form" action="" method ="POST" onsubmit="return validate_form ( )">
+            <input type = "month" name = input_date placeholder = input_date>
+            <br><br>
+            <input type = "month" name = input_date1 placeholder = input_date1>
+            <br><br>
+            <input type = submit class="button" value ="Отправить">
+        </form>
+        <br><br>
+        <br>
+        <form action="" method ="POST">
+            <input type = submit class="button1" value ="Нажмите, чтобы вывести всех поставщиков" name="action">
+        </form>
+        <br><br><br><br>
+        <a href={{url_for('bp_query.query')}}> Вернуться в меню запросов</a>
+    </div>
+    </article>
+</main>
+</body>
+</html>

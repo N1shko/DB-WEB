@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block manager %}
+
+    <br>
+    <a href="{{ url_for('bp_query.query') }}">Начать работу с запросами</a><br>
+    <a href="{{ url_for('bp_report.start_report') }}">Начать работу с отчетами</a><br>
+    <a href="{{ url_for('bp_confirm.order_check') }}">Просмотреть новые накладные</a><br>
+    <a href="/exit"> Нажмите для выхода из системы</a>
+{% endblock %}

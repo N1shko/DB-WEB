@@ -1,0 +1,1 @@
+select max(cn_id) as max_id from consignment_note where supplier_id = '$user_id'

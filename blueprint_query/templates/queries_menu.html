@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+</head>
+
+<body>
+<main align="center">
+<br><br><br>
+<article>
+
+  <h1 align = center> Выберите действие</h1>
+
+<br>
+       <a href={{url_for('bp_query.storage')}}> Вывести содержимое склада</a>
+        <br>
+       <a href={{url_for('bp_query.cons_data')}}> Вывести данные по накладной</a>
+      <br>
+       <a href={{url_for('bp_query.sup_cons')}}> Вывести данные накладных по поставщику</a>
+      <br>
+       <a href={{url_for('bp_query.sup_date')}}> Вывести данные поставщиков, заключивших договор в определенное время</a>
+      <br>
+    <a href={{url_for('menu_choice')}}> Нажмите, чтобы вернуться в главное меню</a>
+    <br>
+    <a href="/exit"> Нажмите для выхода из системы</a>
+</article>
+</main>
+
+</body>
+</html>

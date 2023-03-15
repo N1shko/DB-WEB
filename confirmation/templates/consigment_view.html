@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат выполнения запроса</title>
+   <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+</head>
+<body>
+<main align="center">
+    <article class="verybigarticle">
+ <h1 align="center"> Неподтвержденные накладные</h1> <br><br>
+
+    <table class="bigtable" border = 1 width = 80%>
+      <tr>
+          {% for column in schema%}
+            <td class= border align="center">{{column}}</td>
+          {% endfor %}
+      </tr>
+        {% for line in result %}
+        <tr>
+              <td align = 'center'> {{line['cn_id']}}</td>
+              <td align = 'center'> {{line['cn_date_of_supply']}}</td>
+              <td align = 'center'> {{line['cn_summary']}}</td>
+              <td align = 'center'> {{line['supplier_id']}}</td>
+                <td align = 'center'><form action="" method="post">
+                <input type="hidden" name="cn_id" value="{{ line['cn_id']}}">
+                    <input type="submit" class="button1" name="action" value="Просмотреть накладную">
+                    <input type="submit" class="button1" name="action1" value="Подтвердить накладную">
+                    <input type="submit" class="button1" name="action2" value="Отклонить накладную">
+                </form></td>
+        </tr>
+        {% endfor %}
+    </table> <br><br>
+    <a href={{url_for('menu_choice')}}> Вернуться в главное меню</a>
+    </article>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+select * from `123`.blank

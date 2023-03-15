@@ -1,0 +1,1 @@
+select Nomen_blank_id, blank_name from nomenklatura where Nomen_blank_id = "$Nomen_blank_id"

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block director %}
+
+    <br>
+    <a href="{{ url_for('bp_query.query') }}">Начать работу с запросами</a><br>
+    <a href="{{ url_for('bp_report.start_report') }}">Начать работу с отчетами</a><br>
+    <a href="/exit"> Нажмите для выхода из системы</a>
+{% endblock %}

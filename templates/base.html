@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base_menu</title>
+<link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+</head>
+<body>
+
+<main align="center">
+<br><br><br>
+<article>
+
+        <h1 align="center"> Вам доступны следующие действия </h1>
+        {% block manager %}{% endblock %}
+        {% block director %}{% endblock %}
+        {% block external_user %}{% endblock %}
+
+    </article>
+
+</main>
+</body>
+</html>

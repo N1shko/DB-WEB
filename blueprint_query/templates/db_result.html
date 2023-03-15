@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат выполнения запроса</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+</head>
+<body>
+<main align="center">
+<br><br><br>
+<article class="bigarticle">
+ <h1 align="center"> Результат выполнения запроса </h1> <br><br>
+    {%if text%}
+    <h1 align="center">{{text}}</h1> <br><br>
+    {%endif%}
+    <table align="center" border = 1 width = 80%>
+
+      <tr>
+          {% for column in schema %}
+            <td class= border align="center">{{column}}</td>
+          {% endfor %}
+      </tr>
+        {% for line in result %}
+          <tr>
+           {% for column in line %}
+            <td align = 'center'> {{column}} </td>
+           {% endfor %}
+         </tr>
+        {% endfor %}
+    </table> <br><br>
+    <a href={{url_for('bp_query.query')}}> Вернуться в меню запросов</a>
+</article>
+</main>
+
+</body>
+</html>
